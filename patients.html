@@ -1,0 +1,44 @@
+<!-- Patients page content -->
+<div id="patients" class="page-content fade-in">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-800">Patient Records</h2>
+        <button onclick="showAddPatientForm()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium">
+            ➕ Add Patient
+        </button>
+    </div>
+
+    <!-- Search and filter controls -->
+    <div class="bg-white rounded-xl p-6 card-shadow mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+                <input type="text" id="patientSearch" placeholder="Search by name or ID..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <select id="statusFilter" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="">All Status</option>
+                    <option value="Under Treatment">Under Treatment</option>
+                    <option value="Appointment Scheduled">Appointment Scheduled</option>
+                    <option value="Discharged">Discharged</option>
+                </select>
+            </div>
+            <div>
+                <select id="sortBy" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="name">Sort by Name</option>
+                    <option value="date">Sort by Date</option>
+                    <option value="age">Sort by Age</option>
+                    <option value="id">Sort by ID</option>
+                </select>
+            </div>
+            <div>
+                <button onclick="applyFilters()" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors duration-300">
+                    Apply Filters
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Patient list container -->
+    <div id="patientList" class="space-y-4">
+        <!-- Patient cards will be generated here by JavaScript -->
+    </div>
+</div>

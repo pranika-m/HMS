@@ -1,0 +1,87 @@
+<!-- Dashboard page content -->
+<div id="dashboard" class="page-content fade-in">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Hospital Management Dashboard</h2>
+
+    <!-- Statistics cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white rounded-xl p-6 card-shadow scale-hover">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-gray-600 text-sm">Total Patients</p>
+                    <p class="text-3xl font-bold text-blue-600" id="totalPatients">0</p>
+                </div>
+                <div class="text-4xl">👥</div>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl p-6 card-shadow scale-hover">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-gray-600 text-sm">Active Treatments</p>
+                    <p class="text-3xl font-bold text-green-600" id="activePatients">0</p>
+                </div>
+                <div class="text-4xl">🩺</div>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl p-6 card-shadow scale-hover">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-gray-600 text-sm">Appointments</p>
+                    <p class="text-3xl font-bold text-orange-600" id="appointments">0</p>
+                </div>
+                <div class="text-4xl">📅</div>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl p-6 card-shadow scale-hover">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-gray-600 text-sm">Discharged</p>
+                    <p class="text-3xl font-bold text-purple-600" id="discharged">0</p>
+                </div>
+                <div class="text-4xl">✅</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Add Patient card -->
+        <div class="bg-white rounded-2xl p-8 card-shadow scale-hover cursor-pointer" onclick="showAddPatientForm()">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 pulse-animation">
+                    <span class="text-4xl">➕</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Add New Patient</h3>
+                <p class="text-gray-600 mb-6">Register new patients with complete medical information and treatment details</p>
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <p class="text-sm text-blue-700 font-medium">Quick Registration Available</p>
+                </div>
+            </div>
+        </div>
+        <!-- View Patients card -->
+        <div class="bg-white rounded-2xl p-8 card-shadow scale-hover cursor-pointer" onclick="showPage('patients')">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 pulse-animation">
+                    <span class="text-4xl">📋</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Patient Records</h3>
+                <p class="text-gray-600 mb-6">View, search, update and manage all patient records with advanced filtering options</p>
+                <div class="bg-green-50 rounded-lg p-4">
+                    <p class="text-sm text-green-700 font-medium">Smart Search & Sort</p>
+                </div>
+            </div>
+        </div>
+        <!-- Patient Reports card -->
+        <div class="bg-white rounded-2xl p-8 card-shadow scale-hover cursor-pointer" onclick="showPage('reports')">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 pulse-animation">
+                    <span class="text-4xl">📊</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Patient Reports</h3>
+                <p class="text-gray-600 mb-6">Generate detailed patient history reports and medical summaries</p>
+                <div class="bg-purple-50 rounded-lg p-4">
+                    <p class="text-sm text-purple-700 font-medium">Comprehensive History</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Apply Inter font to all elements */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Fade-in animation for page transitions */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Slide-up animation for modals */
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Hover effect for cards */
+.scale-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scale-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Pulse animation for interactive elements */
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Shadow for cards */
+.card-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus effect for search inputs */
+.search-focus:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Style for active navigation button */
+.active-nav {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #2563eb;
+    border-radius: 0.5rem;
+}
+
+/* Styles for printing reports */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printableReport, #printableReport * {
+        visibility: visible;
+    }
+
+    #printableReport {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Gradient background for header */
+.gradient-bg {
+    background: linear-gradient(90deg, #2563eb 0%, #7c3aed 50%, #4f46e5 100%);
+}

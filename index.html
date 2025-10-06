@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital Management System</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+    <!-- Header with navigation -->
+    <header style="background: linear-gradient(90deg, #2563eb 0%, #7c3aed 50%, #4f46e5 100%);" class="text-black shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <!-- Logo and title -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex-none flex items-center justify-center shadow-md">
+                        <span class="text-3xl">🏥</span>
+                    </div>
+                    <div>
+                        <h1 class="text-4xl font-bold tracking-wide">MediCare HMS</h1>
+                        <p class="text-sm opacity-90">Hospital Management System</p>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <nav class="flex items-center space-x-2">
+                    <button onclick="showPage('dashboard')" id="dashboardBtn" class="px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 font-medium flex items-center space-x-2">
+                        <span class="text-3xl">🏠</span>
+                        <span class="text-3xl">Dashboard</span>
+                    </button>
+                    <button onclick="showPage('patients')" id="patientsBtn" class="px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 font-medium flex items-center space-x-2">
+                        <span class="text-3xl">👥</span>
+                        <span class="text-3xl">Patients</span>
+                    </button>
+                    <button onclick="showPage('reports')" id="reportsBtn" class="px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 font-medium flex items-center space-x-2">
+                        <span class="text-3xl">📊</span>
+                        <span class="text-3xl">Reports</span>
+                    </button>
+                </nav>
+
+                <!-- Live date and time display -->
+                <div class="text-right min-w-[200px] bg-white bg-opacity-10 rounded-lg px-4 py-3">
+                    <div id="currentDateTime" class="text-2xl font-semibold whitespace-nowrap"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Container where page content will be loaded -->
+    <div id="pageContent" class="container mx-auto px-6 py-8">
+        <!-- Page content will be inserted here by JavaScript -->
+    </div>
+
+    <!-- Container for modals (Add/Edit Patient) -->
+    <div id="modalContainer" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <!-- Modal content will be inserted here by JavaScript -->
+    </div>
+</body>
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

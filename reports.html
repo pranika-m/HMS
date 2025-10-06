@@ -1,0 +1,25 @@
+<!-- Reports page content -->
+<div id="reports" class="page-content fade-in">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">Patient Reports</h2>
+    <div class="bg-white rounded-xl p-8 card-shadow">
+        <h3 class="text-xl font-bold text-gray-800 mb-6">Generate Patient History Report</h3>
+        <div class="flex space-x-4 mb-6">
+            <div class="flex-1">
+                <input type="text" id="reportPatientId" placeholder="Enter Patient ID..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <button onclick="generateReport()" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors duration-300 font-medium">
+                Generate Report
+            </button>
+            <button onclick="printReport()" id="printBtn" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300 font-medium hidden">
+                🖨️ Print Report
+            </button>
+        </div>
+        <div id="reportResult" class="hidden">
+            <div class="border-t pt-6">
+                <div id="reportContent" class="space-y-6">
+                    <!-- Report content will be generated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
