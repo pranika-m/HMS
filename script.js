@@ -738,27 +738,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if (patientManager.patients.length === 0) {
         const samplePatients = [
             {
-                name: 'John Smith',
+                name: 'Arun',
                 age: 45,
                 gender: 'Male',
                 diagnosis: 'Hypertension and diabetes management',
-                date: '2025-07-15',
+                date: '2025-09-28',
                 status: 'Under Treatment'
             },
             {
-                name: 'Sarah Johnson',
+                name: 'Sarah',
                 age: 32,
                 gender: 'Female',
                 diagnosis: 'Routine checkup and vaccination',
-                date: '2025-06-20',
+                date: '2025-09-25',
                 status: 'Discharged'
             },
             {
-                name: 'Michael Brown',
+                name: 'Balu',
                 age: 28,
                 gender: 'Male',
                 diagnosis: 'Follow-up consultation for knee injury',
-                date: '2024-08-25',
+                date: '2025-10-10',
                 status: 'Appointment Scheduled'
             }
         ];
@@ -768,4 +768,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load dashboard by default
     showPage('dashboard');
     document.getElementById('dashboardBtn').classList.add('active-nav');
+
 });
